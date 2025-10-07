@@ -28,7 +28,7 @@ Key Features
 
 Repository Layout
 -----------------
-.
+
 ├─ main.py                  # Run hybrid recommendations for a given user
 ├─ main_eval.py             # Evaluation: RMSE, Precision@K, Recall@K
 ├─ requirements.txt         # Python dependencies (install with pip)
