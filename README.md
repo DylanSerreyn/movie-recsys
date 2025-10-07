@@ -29,19 +29,30 @@ Key Features
 Repository Layout
 -----------------
 
-├─ main.py                  # Run hybrid recommendations for a given user
-├─ main_eval.py             # Evaluation: RMSE, Precision@K, Recall@K
-├─ requirements.txt         # Python dependencies (install with pip)
-├─ .gitignore               # Ignores secrets and large CSVs
-├─ data/
-│  └─ ml-32m/               # Put MovieLens CSVs here (movies.csv, ratings.csv, tags.csv, links.csv)
-└─ src/
-   └─ recsys/
-      ├─ io.py              # CSV loading helpers
-      ├─ cf_sklearn.py      # TruncatedSVD collaborative filtering (no surprise dependency)
-      ├─ content.py         # Genre-based content model + title resolver
-      ├─ eval.py            # Metrics and per-user evaluation helpers
-      └─ (optional) cache.py# On-disk cache (if you enable it)
+movie-recsys/
+│
+├── README.md
+├── requirements.txt
+├── .gitignore
+│
+├── main.py                 # Hybrid recommender (run this)
+├── main_eval.py            # Evaluation: RMSE, Precision@K, Recall@K
+│
+├── data/
+│   └── ml-32m/             # Put MovieLens CSVs here (not committed)
+│       ├── movies.csv
+│       ├── ratings.csv
+│       ├── tags.csv
+│       └── links.csv
+│
+└── src/
+    └── recsys/
+        ├── __init__.py
+        ├── io.py          # CSV loaders (paths, dtypes)
+        ├── cf_sklearn.py  # Collaborative Filtering (TruncatedSVD + biases)
+        ├── content.py     # Genre-based content model + user profile
+        └── eval.py        # Evaluation helpers (splits, RMSE, P@K/R@K)
+
 
 
 Prerequisites
