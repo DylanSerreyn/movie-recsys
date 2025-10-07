@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local config / secrets
+.env
+
+# Editors/OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Big data (don’t commit MovieLens CSVs)
+data/**/ratings*.csv
+data/**/movies*.csv
+data/**/tags*.csv
+data/**/links*.csv
+
+# Caches
+.cache/
